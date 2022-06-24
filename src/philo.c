@@ -6,7 +6,7 @@
 /*   By: iayni <iayni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 21:46:50 by iayni             #+#    #+#             */
-/*   Updated: 2022/06/18 16:26:38 by iayni            ###   ########.fr       */
+/*   Updated: 2022/06/23 21:56:44 by iayni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void    *init_data(void *args)
 {
     t_philo *philo;
     
-    philo = (t_philo*)args;
+    philo = (t_philo *)args;
     if(philo->id % 2 == 0)
         usleep(10);
     philo->last_meal = in_time();

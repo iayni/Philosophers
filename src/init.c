@@ -6,7 +6,7 @@
 /*   By: iayni <iayni@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 23:22:26 by iayni             #+#    #+#             */
-/*   Updated: 2022/06/20 22:06:46 by iayni            ###   ########.fr       */
+/*   Updated: 2022/06/23 21:57:56 by iayni            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int check_args(char **av)
 
 int arg_to_param(t_data *var, char **av)
 {
-    if(check_args(av))
+    if(check_args(av) )
         return (exit_error());
     var->total_ate = 0;
     var->time = in_time();
@@ -54,7 +54,6 @@ int arg_to_param(t_data *var, char **av)
     }
     else
         var->must_eat = -1;
-    printf("hada  %ld\n", var->time);
     return (0);    
 }
 
