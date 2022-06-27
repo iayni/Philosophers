@@ -46,7 +46,7 @@ int	end_program(int err, t_data *data)
 
 void	print(t_philo *philo, char *str)
 {
-	unsigned int daba;
+	unsigned int	daba;
 
 	daba = get_time();
 	sem_wait(philo->data->print);

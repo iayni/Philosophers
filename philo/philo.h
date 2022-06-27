@@ -42,16 +42,16 @@ typedef struct s_data
 	t_philo				*philos;
 }	t_data;
 
-int		allocate(t_data *data, char **av);
-int		ft_atoi(char *str);
-int		check_args(int ac, char **av);
-void	thread_init(t_data *data);
-void	init_forks(t_philo *philo, int i);
-void	*handler(void *arg);
-void	ft_usleep(unsigned long time);
-void	*manage(t_data *data);
-int		must_eat(int *c, t_philo *philo);
-void	print(t_philo *philo, char *str, int n);
+int			allocate(t_data *data, char **av);
+int			ft_atoi(char *str);
+int			check_args(int ac, char **av);
+void		thread_init(t_data *data);
+void		init_forks(t_philo *philo, int i);
+void		*handler(void *arg);
+void		ft_usleep(unsigned long time);
+void		*manage(t_data *data);
+int			must_eat(int *c, t_philo *philo);
+void		print(t_philo *philo, char *str, int n);
 long long	get_time(void);
 
 #endif

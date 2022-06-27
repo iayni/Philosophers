@@ -14,7 +14,7 @@
 
 void	*check_eat(void *arg)
 {
-	t_data *data;
+	t_data	*data;
 	int		i;
 
 	i = -1;

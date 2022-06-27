@@ -14,8 +14,8 @@
 
 int	allocate(t_data *data, char **av)
 {
-	int i;
- 
+	int	i;
+
 	i = -1;
 	data->n_philo = ft_atoi(av[1]);
 	data->t_die = ft_atoi(av[2]);
@@ -54,13 +54,13 @@ int	free_all(t_data *data)
 	return (0);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_data		data;
+	t_data	data;
 
 	if ((ac == 5 || ac == 6) && check_args(ac, av))
 	{
-		if(!allocate(&data, av))
+		if (!allocate(&data, av))
 			return (printf("Error !! Allocating\n"), 0);
 		thread_init(&data);
 		manage(&data);

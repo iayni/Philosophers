@@ -43,7 +43,7 @@ void	unlink_sem(void)
 
 int	main(int ac, char **av)
 {
-	t_data 	data;
+	t_data	data;
 	int		error;
 
 	memset(&data, 0, sizeof(t_data));

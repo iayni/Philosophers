@@ -14,7 +14,7 @@
 
 void	ft_usleep(unsigned long time)
 {
-	unsigned long now;
+	unsigned long	now;
 
 	now = get_time();
 	while (get_time() - now < time)
@@ -26,18 +26,18 @@ void	init_forks(t_philo *philo, int i)
 	if (i == 0)
 	{
 		pthread_mutex_lock(&philo->data->forks[(philo->id - 1)
-		% philo->data->n_philo]);
+			% philo->data->n_philo]);
 		print(philo, "Taken a Fork", 1);
 		pthread_mutex_lock(&philo->data->forks[(philo->id)
-		% philo->data->n_philo]);
+			% philo->data->n_philo]);
 		print(philo, "Taken a Fork", 1);
 	}
 	else
 	{
 		pthread_mutex_unlock(&philo->data->forks[(philo->id - 1)
-		% philo->data->n_philo]);
+			% philo->data->n_philo]);
 		pthread_mutex_unlock(&philo->data->forks[(philo->id)
-		% philo->data->n_philo]);
+			% philo->data->n_philo]);
 	}
 }
 
@@ -46,7 +46,7 @@ void	*handler(void *arg)
 	t_philo	*philo;
 
 	philo = arg;
-	if(!(philo->id & 1))
+	if (!(philo->id & 1))
 		ft_usleep(philo->data->t_eat / 2);
 	while (1)
 	{

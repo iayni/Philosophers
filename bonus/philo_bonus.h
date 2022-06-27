@@ -63,6 +63,4 @@ void			*check_eat(void *arg);
 void			*check_death(void *arg);
 unsigned int	get_time(void);
 
-
-
 #endif

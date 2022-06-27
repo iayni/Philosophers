@@ -12,17 +12,17 @@
 
 #include "philo_bonus.h"
 
-static int ft_isdigit(int c)
+static int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }
 
-static int check_num(int ac, char **av)
+static int	check_num(int ac, char **av)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (i < ac)
@@ -43,7 +43,7 @@ static int check_num(int ac, char **av)
 	return (0);
 }
 
-static int valid_arg(int ac, char **av)
+static int	valid_arg(int ac, char **av)
 {
 	if (ft_atoi(av[1]) < 0 || ft_atoi(av[2]) < 1 || ft_atoi(av[3]) < 1)
 		return (1);

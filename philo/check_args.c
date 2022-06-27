@@ -38,27 +38,27 @@ int	ft_atoi(char *str)
 	return (res * sign);
 }
 
-int		check_args(int ac, char **av)
+int	check_args(int ac, char **av)
 {
 	int	i;
 
 	i = 0;
 	while (++i < ac)
-		if(ft_atoi(av[i]) < 1)
+		if (ft_atoi(av[i]) < 1)
 			return (printf("Parsing Error!!\n"), 0);
 	return (1);
 }
 
 int	must_eat(int *c, t_philo *philo)
 {
-	if(philo->ate >= philo->data->n_eat)
+	if (philo->ate >= philo->data->n_eat)
 		*c += 1;
-		if (* c == philo->data->n_philo)
-		{
-			print(philo, NULL, 0);
-			return (0);
-		}
-		return (1);
+	if (*c == philo->data->n_philo)
+	{
+		print(philo, NULL, 0);
+		return (0);
+	}
+	return (1);
 }
 
 void	*manage(t_data *data)

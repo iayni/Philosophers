@@ -22,7 +22,7 @@ long long	get_time(void)
 
 void	print(t_philo *philo, char *str, int n)
 {
-	pthread_mutex_lock(&philo->data->print);\
+	pthread_mutex_lock(&philo->data->print);
 	if (str)
 		printf("%lldms %d %s\n", (get_time() - philo->data->time),
 			philo->id, str);

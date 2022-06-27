@@ -22,7 +22,7 @@ unsigned int	get_time(void)
 	return (time.tv_usec + time.tv_sec);
 }
 
-static	int philo_fill(t_data *data)
+static int	philo_fill(t_data *data)
 {
 	int			i;
 	int			id;
